@@ -8,6 +8,7 @@ spring:
   jpa:
     hibernate:
 #      ddl-auto: create
+
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
@@ -19,4 +20,4 @@ logging:
 
 jwt:
   secret: 882c3947bc1163e2489059d4e2f6294fe3d5ea987245e55ac47f02d4921abdb6
-  lifetime: 1m
+  lifetime: 10m

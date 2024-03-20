@@ -1,5 +1,6 @@
 package com.backend.PowerUp.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -30,6 +31,9 @@ public class User {
     private String firstname;
     @Column(name = "lastname")
     private String lastname;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_image_id", referencedColumnName = "id")
+    private UserImage userImage;
     @ManyToMany
     @JoinTable(
             name = "users_roles",
