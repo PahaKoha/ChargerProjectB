@@ -13,7 +13,7 @@ import java.io.IOException;
 
 @RestController
 @RequiredArgsConstructor
-public class ImageDataController {
+public class  ImageDataController {
     private final UserImageService userImageService;
 
     @PostMapping("/image")
